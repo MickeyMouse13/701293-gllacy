@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Каталог "Глэйси"</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="catalog-page">
   <!--Заголовок каталога-->
    <header>
-      <nav class="main-navigation">
-          <a class="main-header-logo" href="index.html">
-          <img src="img/index-logo.svg" alt="Логотип интернет-магазина 'Глэйси'">
-          </a>
-          <ul class="site-navigation">   
-                  <li class="catalog-link"><a href="catalog.html">Каталог</a></li>
+          <nav class="main-navigation">
+              <a class="main-header-logo">
+              <img src="" alt="Логотип интернет-магазина 'Глэйси' ">
+              </a> <!--переделать ссылку-->
+              <ul class="site-navigation">   
+                  <li class="catalog-link"><a class="button-main" href="catalog.html">Каталог</a></li>
                         <ul class="sub-menu-catalog">                  <!-- Всплывающее меню каталога-->
                             <li class="catalog-group-new"><a href="new.html">Новинки</a></li>
                             <li class="catalog-group"><a href="catalog-goup1.html">Сливочное</a></li>
@@ -20,11 +22,11 @@
                             <li class="catalog-group"><a href="catalog-goup3.html">Фруктовый лед</a></li>
                             <li class="catalog-group"><a href="catalog-goup4.html">Мелорин</a></li>
                         </ul>
-                  <li class="delivery-link"><a href="delivery.html">Доставка и оплата</a></li>
-                  <li class="about-link"><a href="about.html">О компании</a></li>
-           </ul>
+                  <li class="delivery-link"><a class="button-main" href="delivery.html">Доставка и оплата</a></li>
+                  <li class="about-link"><a class="button-main" href="about.html">О компании</a></li>
+              </ul>
               <ul class="user-navigation">            
-                 <li class="button-header search"><a href="#">Поиск</a></li> 
+                 <li class="button-main-nav"><a href="#">Поиск</a></li> 
                      <ul class="sub-menu-search">                   <!--Всплывающая форма поиска-->      
                          <li>                 
                              <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
@@ -33,7 +35,7 @@
                              </form>
                          </li>
                      </ul>  
-                 <li class="button-header login"><a class="login-link" href="login.html">Вход</a></li> 
+                 <li class="button-header login"><a class="login-link button-main-nav " href="login.html">Вход</a></li> 
                      <ul class="sub-menu-login">                    <!-- Всплывающая форма входа-->
                          <li>
                              <form class="login-form" method="post" action="https://echo.htmlacademy.ru">
@@ -41,20 +43,20 @@
                                  <input type="email" id="login" name="login" placeholder="Электронная почта">
                                  <label class="visually-hidden" for="password">Пароль</label>
                                  <input type="password" id="password" name="password" placeholder="Пароль">
-                                 <button class="button-main" type="submit">Войти</button>
+                                 <button type="submit" class="button">Войти</button>
                                  <a class="restore" href="#">Забыли пароль?</a>
                                  <a class="registration" href="#">Новая регистрация</a>
                              </form>
                          </li>
                      </ul>
-                 <li class="button-header basket"><a class="basket-link" href="basket.html">Корзина</a></li> <!--форма корзины-->
-           </ul>
-       </nav>
+                 <li class="button-header basket"><a class="basket-link button-main-nav" href="basket.html">Корзина</a></li> <!--форма корзины-->
+              </ul>
+          </nav>
           <ul class="main-header-info">
               <li class="work-time">С 10 до 20, ежедневно</li>
               <li class="phone-number">8 912 450-25-25</li>
           </ul>
-   </header>
+      </header>
    <!--Cтраница каталога-->
    <main class="content">
        <!--Путь -->
@@ -76,10 +78,11 @@
           <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
               <fieldset>
                  <legend>Сортировка</legend>
-                 <select name="Сортировка">
-                     <option value="по популярности">по популярности</option>   <!--Нужны эти варианты?-->
-                     <option value="цена по убыванию">цена по убыванию</option>
-                     <option value="цена по возрастанию">цена по возрастанию</option>
+                 <select name="Сортировка" class="sort">
+                     <option value="по популярности">по популярности</option>
+                     <option value="сначала недорогие">сначала недорогие</option>
+                     <option value="сначала дорогие">сначала дорогие</option>
+                     <option value="по жирности">по жирности</option>
                  </select>
               </fieldset>
               <fieldset>
@@ -88,7 +91,7 @@
               </fieldset>
               <fieldset>
                  <legend>Жирность</legend>
-                 <ul>
+                 <ul class="fat-value">
                      <li class="filter-option">
                          <input type="radio" name="жирность" value="0%" class="visually-hidden filter-input filter-input-radio" id="0%">
                          <label for="0%">0%</label>
@@ -109,7 +112,7 @@
               </fieldset>
               <fieldset>
                  <legend>Наполнители</legend> 
-                 <ul>
+                 <ul class="filler-value">
                      <li class="filter-option">
                          <input type="checkbox" name="наполнитель-шоколад" class="visually-hidden filter-input filter-input-checkbox" id="chokolate" checked>
                          <label for="chokolate">шоколадные</label>
@@ -221,6 +224,7 @@
            </nav>
        </section>
    </main>
+        <hr>
          <!--Подвал-->
    <footer>
          <!-- Соц. сети -->

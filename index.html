@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
                 <!--  Заголовок сайта   -->
@@ -12,7 +15,7 @@
               <img src="" alt="Логотип интернет-магазина 'Глэйси' ">
               </a> <!--переделать ссылку-->
               <ul class="site-navigation">   
-                  <li class="catalog-link"><a href="catalog.html">Каталог</a></li>
+                  <li class="catalog-link"><a class="button-main" href="catalog.html">Каталог</a></li>
                         <ul class="sub-menu-catalog">                  <!-- Всплывающее меню каталога-->
                             <li class="catalog-group-new"><a href="new.html">Новинки</a></li>
                             <li class="catalog-group"><a href="catalog-goup1.html">Сливочное</a></li>
@@ -20,11 +23,11 @@
                             <li class="catalog-group"><a href="catalog-goup3.html">Фруктовый лед</a></li>
                             <li class="catalog-group"><a href="catalog-goup4.html">Мелорин</a></li>
                         </ul>
-                  <li class="delivery-link"><a href="delivery.html">Доставка и оплата</a></li>
-                  <li class="about-link"><a href="about.html">О компании</a></li>
+                  <li class="delivery-link"><a class="button-main" href="delivery.html">Доставка и оплата</a></li>
+                  <li class="about-link"><a class="button-main" href="about.html">О компании</a></li>
               </ul>
               <ul class="user-navigation">            
-                 <li class="button-header search"><a href="#">Поиск</a></li> 
+                 <li class="button-main-nav"><a href="#">Поиск</a></li> 
                      <ul class="sub-menu-search">                   <!--Всплывающая форма поиска-->      
                          <li>                 
                              <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
@@ -33,7 +36,7 @@
                              </form>
                          </li>
                      </ul>  
-                 <li class="button-header login"><a class="login-link" href="login.html">Вход</a></li> 
+                 <li class="button-header login"><a class="login-link button-main-nav " href="login.html">Вход</a></li> 
                      <ul class="sub-menu-login">                    <!-- Всплывающая форма входа-->
                          <li>
                              <form class="login-form" method="post" action="https://echo.htmlacademy.ru">
@@ -41,13 +44,13 @@
                                  <input type="email" id="login" name="login" placeholder="Электронная почта">
                                  <label class="visually-hidden" for="password">Пароль</label>
                                  <input type="password" id="password" name="password" placeholder="Пароль">
-                                 <button class="button-main" type="submit">Войти</button>
+                                 <button type="submit" class="button">Войти</button>
                                  <a class="restore" href="#">Забыли пароль?</a>
                                  <a class="registration" href="#">Новая регистрация</a>
                              </form>
                          </li>
                      </ul>
-                 <li class="button-header basket"><a class="basket-link" href="basket.html">Корзина</a></li> <!--форма корзины-->
+                 <li class="button-header basket"><a class="basket-link button-main-nav" href="basket.html">Корзина</a></li> <!--форма корзины-->
               </ul>
           </nav>
           <ul class="main-header-info">
@@ -58,7 +61,7 @@
              <!--   Главная страница   -->
       <main class="content">
           <section class="slider">    
-              <button type="button" class="button-main">Давайте оба</button>  <!-- РАЗМЕТИТЬ СЛАЙДЕР -->
+              <button type="button" class="button-all">Давайте оба!</button>  <!-- РАЗМЕТИТЬ СЛАЙДЕР -->
           </section> 
              <!-- Выгодные предложения-->
           <section class="attractive-offers">
@@ -66,13 +69,13 @@
               <section class="offer-1">
                   <h3>Малинка даром!</h3>
                   <p> При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-                  <button type="button" class="button-main">Хочу варенье!</button>
+                  <button type="button" class="button">Хочу варенье!</button>
               </section>
               <!-- 2-е предложение-->
               <section class="offer-2">
                   <h3>Шоколадки даром!</h3>
                   <p> При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-                  <button type="button" class="button-main">Хочу шоколадки!</button>
+                  <button type="button" class="button">Хочу шоколадки!</button>
               </section>
           </section>
               <!-- Хиты продаж-->
@@ -131,7 +134,7 @@
               <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru">
                   <label class="visually-hidden" for="sub-email" >Электронная почта</label>
                   <input type="email" id="sub-email" name="sub-email" placeholder="Электронная почта"> 
-                  <button class="button-main" type="submit">Отправить</button>
+                  <button class="button" type="submit">Отправить</button>
               </form>
           </section>
           <!-- Карта-->
@@ -141,13 +144,13 @@
           </section>
           <!-- Контакты-->
           <section class="contacts">
-              <p>Адрес главного офиса и офлайн-магазина:<br>
-              <strong>ул.Большая Конюшенная 19/8, Санкт-Петербург</strong></p>
+              <p>Адрес главного офиса<br> и офлайн-магазина:<br>
+              <span>ул.Большая Конюшенная 19/8, Санкт-Петербург</span></p>
               <p>Для заказов по телефону:<br>
-              <strong>8 812 450-25-25</strong><br>
+              <span>8 812 450-25-25</span><br>
               (с 10 до 20 ежедневно)
               </p>
-              <button type="button" class="button-main">Форма обратной связи</button> <!-- РАЗМЕТИТЬ ФОРМУ ОБР СВЯЗИ после футера-->
+              <button type="button" class="button">Форма обратной связи</button> 
           </section>
       </main>
              <!-- Подвал-->
@@ -164,7 +167,7 @@
               <!-- Ссылки на разделы-->
           <div class="links">
               <ul>
-                  <li><a href="#">Для поставщиков</a></li>        
+                  <li class="supplier"><a href="#">Для поставщиков</a></li>        
                   <li><a href="#">О производстве</a></li>
                   <li><a href="#">Наши документы</a></li>
                   <li><a href="#">Экологические стандарты</a></li>
@@ -185,7 +188,7 @@
              <input type="email" id="feedback-mail" name="feedback-mail" placeholder="Ваша почта для ответа?">
              <textarea id="message" name="message">Напишите что-нибудь...</textarea>
              <button type="button" class="button-close">Закрыть</button>       <!--КРЕСТИК ВМЕСТО ПОДПИСИ-->
-             <button type="submit" class="button-main">Отправить</button>
+             <button type="submit" class="button">Отправить</button>
          </form>
       </div>
   </body>
