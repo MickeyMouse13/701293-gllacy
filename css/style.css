@@ -102,18 +102,24 @@ body,
     color: #323232;
 }
 
-.catalog-group a:hover {
+.catalog-group:hover {
     background-color: #fbded7;
 }
 
-.catalog-group a:focus, 
-.catalog-group a:active {
+.catalog-group:focus, 
+.catalog-group:active {
     background-color: #f6b5a5;
 }
 
-/*Добавить эффект " находимся на странице "*/
+.catalog-page .catalog-group:nth-child(2){
+    background-color: #d07058;
+}
 
-/* СЛАЙДЕР + кнопка */
+.slider h1 {
+    font-size: 60px;
+    line-height: 61px;
+    font-weight: 700;
+}
 
 .offer-1 h3,
 .offer-2 h3 {
@@ -327,7 +333,7 @@ body,
     background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
     width: 280px;
-    height: 64px;
+    height: 65px;
     font-family: inherit;
     font-size: 32px;
     line-height: 44px;
@@ -336,7 +342,7 @@ body,
 }
 
 .button-all:hover {
-    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: linear-gradient( 90deg, rgb(241,123,100) 0%, rgb(241,123,100) 100%);
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);  
     width: 280px;
     height: 65px;
@@ -371,7 +377,7 @@ body,
 }
 
 .button:hover {
-    background-image:linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image:linear-gradient( 90deg, rgb(241,123,100) 0%, rgb(241,123,100) 100%);
     box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
     height: 46px;
     font-family: inherit;
@@ -393,6 +399,50 @@ body,
 }
 
 /* СТРАНИЦА КАТАЛОГА */
+
+.catalog-page .catalog-link a{
+    color: #333333;
+    background-color: #d07058;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+.basket a {
+    background-color: #f7f6f3;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    color: #323232;
+}
+
+.sub-menu-basket {
+    background-color: #f8f7f4;
+}
+
+.sub-menu-basket td{
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #323232;
+}
+
+.sub-menu-basket span {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #999999;
+}
+
+.sub-menu-basket p {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #323232;
+}
 
 .path a {
     color: #ffffff;
@@ -429,6 +479,10 @@ body,
     line-height: 16px;
     font-weight: 500;
     background-color: #a9b9af;
+}
+
+.item1:hover, .item2:hover, .item3:hover, .item4:hover,.item5:hover,.item6:hover,.item7:hover,.item8:hover,.item9:hover,.item10:hover,.item11:hover,.item12:hover {
+    background-color: #a4b5ab;
 }
 
 .items a {
